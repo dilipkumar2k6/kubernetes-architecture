@@ -121,5 +121,30 @@ Its sitting and watch for changes. It helps to matches desire state.
 - Every pod has their own ip
 - It may sometime end up with ip churn
 - Service helps to resolve ip problem
-- `pods` are belongs to `service` via label
 ![image](services.png) 
+- `pods` are belongs to `service` via label
+- label helps to auto connect new `pod` into label
+![image](pod-labels.png) 
+
+# Replicator controller
+- We do not work with `pod` directly.
+- We use replicator controller to deploy `pods`
+![image](replication-controller.png) 
+
+# Deployment
+- Deployment is all about declarativeness
+- Its self documenting
+- It versioned
+- Spec one and deploy many times
+- Simple rollout and rollback
+- Deployments are proper first class REST object
+- Define spec in either YAML or JSON file
+- It deployed via api server
+- In deployment world, Replication Controllers is replaced by Replica Sets
+- Replica Sets is similar to Replication Controller, its kind of next version
+- Rolling update is core feature of Deployment
+- We can run multiple concurrent versions as blue-green deployment or canary fashion
+- 
+
+
+
